@@ -1,0 +1,39 @@
+.new-transition{
+    width: 400px;
+    border: 1px solid #979797;
+    padding: 20px;
+    margin-right: 20px;
+    border-radius: 4px;
+}
+
+.title-transition{
+    text-align: center;
+    padding-bottom: 21px;
+}
+
+.add-transition{
+    background-color:#333333;
+    color: white;
+    border-radius: 4px;
+    width: 370px;
+    height: 32px;
+    margin-top: 21px;
+    line-height: 22px;
+}
+
+.input{
+    height: 32px;
+    width: 370px;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding-left: 12px;
+    color: #888888;
+}
+
+.new-transition label{
+    margin-top: 21px;
+    margin-bottom: 7px;
+    display: block;
+}
