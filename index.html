@@ -1,95 +1,127 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./assets/css/style.css">
-        <link rel="stylesheet" href="./assets/css/header/header.css">
-        <link rel="stylesheet" href="./assets/css/new-transition/new-transition.css">
-        <link rel="stylesheet" href="./assets/css/transition-extract/transition-extract.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    
-    <body>
-        <header>
-            <div class="container">
-                <div class="header">
-                    <div class="h-img">
-                        <img src="./assets/img/logo.png" alt="">
-                        <h2 class="header-title">Controle financeiro</h2>
-                    </div>
-                    
-                    <div class="menu">
-                        <button class="menu-items">Limpar dados</button>
-                        <a href="#" class="menu-items">Cadastro de transações </a>
-                    </div>
-                </div>
-            </div>
-            
-        </header>
-        <main>
-            <div class="container">
-    
-                <section class="new-transition">
-                    <h2 class="title-transition">Nova transação</h2>
-                    <form>
-                        <div>
-                            <label for="transition-type">Tipo de transação</label>
-                            
-                        </div>
-                        <div>
-                            <select class="input">
-                                <option value="c">Compra</option>
-                                <option value="v">Venda</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="merchandise-name">Nome da mercadoria</label>
-                            <input type="text" name="Input" class="input" placeholder="Input">
-                        </div>
-                        <div>
-                            <label for="value">Valor</label>
-                            <input type="text" name="R$0,00" class="input" placeholder="R$0,00">
-                        </div>
-                        <input type="submit" value="Adicionar transação" class="add-transition">
-                            
-                    </form>
-                </section>
-        
-                <section class="transition-extract">
-                    <h2>Extrato de transações</h2>
-                    <form>
-                        <div class="merchandise-value">
-                            <span>Mercadoria</span>
-                            <span>Valor</span>
-                        </div>
-                        <div class="merchandise1">
-                            <span class="signal">+</span>
-                            <span class="ipsum">Lorem ipsum dolor sit amet consectetur</span>
-                            <span>R$12,999,99</span>
-                        </div>
-                        <div class="merchandise2">
-                            <span class="signal">-</span>
-                            <span class="ipsum">Quis nostrud exercitation</span>
-                            <span>R$99,99</span>
-                        </div>
-                        <div class="merchandise3">
-                            <span class="signal">+</span>
-                            <span class="ipsum">Lorem ipsum</span>
-                            <span>R$9,99</span>
-                        </div>
-                        <div class="total">
-                            <span>Total</span>
-                            <span>R$ 12.909,99</span>
-                            <span class="status">(LUCRO)</span>
-                        </div>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/header/header.css" />
+    <link rel="stylesheet" href="./assets/css/new-transition/new-transition.css" />
+    <link rel="stylesheet" href="./assets/css/transition-extract/transition-extract.css" />
+    <link rel="stylesheet" href="./assets/css/modal/modal.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-                    </form>
-                </section>
-        
+  <body>
+    <header>
+      <div class="container">
+        <div class="header">
+          <div class="h-img">
+            <img src="./assets/img/logo.png" alt="" />
+            <h2 class="header-title">Controle financeiro</h2>
+          </div>
+
+          <div class="menu">
+            <button class="menu-items">Limpar dados</button>
+            <a href="#" class="menu-items">Cadastro de transações </a>
+          </div>
+          <h2 class="header-title2">Controle financeiro</h2>
+          <button class="menu-img">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="bars"
+              class="svg-inline--fa fa-bars fa-w-14"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+            >
+              <path
+                fill="currentColor"
+                d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section class="new-transition">
+          <h2 class="title-transition">Nova transação</h2>
+          <form>
+            <div class="category category1">
+              <div>
+                <label for="transition-type">Tipo de transação</label>
+              </div>
+              <div>
+                <select class="input input1">
+                  <option value="c">Compra</option>
+                  <option value="v">Venda</option>
+                </select>
+              </div>
             </div>
-        </main>
-        
-    </body>
+            <div class="category caregory2">
+              <label for="merchandise-name">Nome da mercadoria</label>
+              <input type="text" name="input" class="input input2" placeholder="Input" />
+            </div>
+            <div class="category category3">
+              <label for="value">Valor</label>
+              <input type="text" name="R$0,00" class="input input3" placeholder="R$0,00" />
+            </div>
+            <input type="submit" value="Adicionar transação" class="add-transition" />
+          </form>
+        </section>
+
+        <section class="transition-extract">
+          <h2>Extrato de transações</h2>
+          <form>
+            <div class="merchandise-value">
+              <span>Mercadoria</span>
+              <span>Valor</span>
+            </div>
+            <div class="merchandise1">
+              <span class="signal">+</span>
+              <span class="ipsum">Lorem ipsum dolor sit amet consectetur</span>
+              <span>R$12,999,99</span>
+            </div>
+            <div class="merchandise2">
+              <span class="signal">-</span>
+              <span class="ipsum">Quis nostrud exercitation</span>
+              <span>R$99,99</span>
+            </div>
+            <div class="merchandise3">
+              <span class="signal">+</span>
+              <span class="ipsum">Lorem ipsum</span>
+              <span>R$9,99</span>
+            </div>
+            <div class="total">
+              <span>Total</span>
+              <span>R$ 12.909,99</span>
+              <span class="status">(LUCRO)</span>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <!-- Para ativar o modal, adicionar "--active" na classe "modal" (modal--active) -->
+    <div class="modal">
+      <div class="modal__container">
+        <button class="modal__close-button">X</button>
+        <ul class="modal__items">
+          <li class="modal__item-wrapper">
+            <button class="modal__item">Limpar dados</button>
+          </li>
+          <li class="modal__item-wrapper">
+            <a href="#" class="modal__item">Cadastro de transações</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
 </html>

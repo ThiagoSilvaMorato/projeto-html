@@ -1,26 +1,46 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-    font-family: Lato;
+html,
+button,
+input,
+select {
+  font-family: Lato;
 }
 
-.container{
-    display:flex;
-    max-width: 1100px;
-    width: 100%;
-    margin: 0 auto;
+.container {
+  display: flex;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.total span{
-    padding-top: 11px;
-    padding-left: 40px;
-    padding-right: 20px;
+.total span {
+  padding-top: 11px;
+  padding-left: 40px;
+  padding-right: 20px;
 }
 
-main{
-    padding-top: 30px;
+main {
+  padding-top: 30px;
+}
+
+/* Tablet portrait e smartphone */
+
+@media screen and (max-width: 769px) {
+  main .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Smartphone*/
+
+@media screen and (max-width: 412px) {
+  main {
+    padding-top: 0;
+  }
 }
