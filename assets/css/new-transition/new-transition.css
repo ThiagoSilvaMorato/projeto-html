@@ -1,6 +1,9 @@
 .new-transition {
   padding: 20px;
   border-radius: 4px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .title-transition {
@@ -13,7 +16,7 @@
   color: white;
   border-radius: 4px;
   margin-top: 21px;
-  line-height: 22px;
+  line-height: 32px;
 }
 
 .input {
@@ -75,38 +78,59 @@
 /* Tablet portrait */
 
 @media screen and (max-width: 769px) and (min-width: 413px) {
-  .new-transition {
-    width: 728px;
-    border: 1px solid #979797;
+  .new-transition form {
+    display: flex;
+    flex-direction: column;
   }
 
-  .category {
-    display: inline-block;
+  .new-transition {
+    width: auto;
+    border: 1px solid #979797;
+    margin: 0;
+  }
+
+  .adjust {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .categories {
+    display: flex;
+  }
+
+  .category1 {
+    width: 23%;
+  }
+
+  .category2 {
+    width: 47.8%;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .category3 {
+    width: 23%;
   }
 
   .input1 {
     height: 32px;
-    width: 150px;
+    width: 100%;
     padding-right: 20px;
   }
 
   .input2 {
     height: 32px;
-    width: 348px;
-    margin-left: 10px;
-    margin-right: 10px;
+    width: 100%;
   }
 
   .input3 {
     height: 32px;
-    width: 150px;
+    width: 100%;
   }
 
   .add-transition {
     width: 200px;
-    display: flex;
-    justify-content: center;
-    margin-left: 474px;
+    align-self: flex-end;
   }
 }
 
@@ -141,6 +165,7 @@
   }
 
   .new-transition {
-    padding-top: 0;
+    padding: 0;
+    padding-bottom: 20px;
   }
 }

@@ -1,7 +1,3 @@
-.transition-extract {
-  padding: 20px;
-}
-
 .merchandise-value {
   display: flex;
   flex-direction: row;
@@ -101,6 +97,7 @@
 @media screen and (max-width: 769px) {
   .transition-extract {
     width: auto;
+    margin-top: 44px;
   }
 
   .transition-extract h2 {

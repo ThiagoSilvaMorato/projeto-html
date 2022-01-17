@@ -3,14 +3,6 @@ header {
   height: 80px;
 }
 
-.menu {
-  background-color: #ffffff;
-  font-size: 16px;
-  margin-top: auto;
-  display: flex;
-  align-items: center;
-}
-
 .header {
   display: flex;
   flex-direction: row;
@@ -61,12 +53,32 @@ a.menu-items {
   visibility: hidden;
 }
 
-.header-title2 {
-  display: none;
-  visibility: hidden;
-}
-
 @media screen and (min-width: 1114px) {
+  .menu {
+    background-color: #ffffff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  .modal__close-button {
+    display: none;
+    visibility: hidden;
+  }
+
+  .content > a {
+    display: none;
+    visibility: hidden;
+  }
+
+  header .container {
+    height: 100%;
+  }
+
+  .header-title2 {
+    margin-left: 20px;
+    margin-right: auto;
+  }
   .menu {
     height: 40px;
   }
@@ -74,15 +86,28 @@ a.menu-items {
   .menu .menu-items {
     height: 20px;
   }
-
-  .h-img {
-    padding-top: 20px;
-  }
 }
 
 /* Tablet landscape */
 
 @media screen and (max-width: 1113px) and (min-width: 770px) {
+  .menu {
+    background-color: #ffffff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  .modal__close-button {
+    display: none;
+    visibility: hidden;
+  }
+
+  .content > a {
+    display: none;
+    visibility: hidden;
+  }
+
   .h-img {
     padding-left: 20px;
   }
@@ -105,12 +130,7 @@ a.menu-items {
 /* Tablet portrait */
 
 @media screen and (max-width: 769px) and (min-width: 413px) {
-  .menu {
-    display: none;
-    visibility: hidden;
-  }
-
-  .menu-img {
+  .content > a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -119,16 +139,12 @@ a.menu-items {
     width: 24px;
     border: none;
     background-color: #e0e0e0;
+    color: #333333;
   }
 
-  .menu-img svg {
+  .content > a svg {
     height: 24px;
     width: 24px;
-  }
-
-  .header-title {
-    display: none;
-    visibility: hidden;
   }
 
   .header-title2 {
@@ -162,27 +178,6 @@ a.menu-items {
 /* Tablet portrait */
 
 @media screen and (max-width: 769px) and (min-width: 413px) {
-  .menu {
-    display: none;
-    visibility: hidden;
-  }
-
-  .menu-img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    visibility: visible;
-    height: 24px;
-    width: 24px;
-    border: none;
-    background-color: #e0e0e0;
-  }
-
-  .menu-img svg {
-    height: 24px;
-    width: 24px;
-  }
-
   .header-title {
     display: none;
     visibility: hidden;
@@ -203,12 +198,7 @@ a.menu-items {
 /* Smartphone */
 
 @media screen and (max-width: 412px) {
-  .menu {
-    display: none;
-    visibility: hidden;
-  }
-
-  .menu-img {
+  .content > a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -217,6 +207,12 @@ a.menu-items {
     width: 24px;
     border: none;
     background-color: #e0e0e0;
+    color: #333333;
+  }
+
+  .content > a svg {
+    height: 24px;
+    width: 24px;
   }
 
   header {
@@ -238,15 +234,6 @@ a.menu-items {
 
   .h-img {
     padding-left: 20px;
-  }
-
-  .menu {
-    margin-right: 20px;
-  }
-
-  .header-title {
-    display: none;
-    visibility: hidden;
   }
 
   .header-title2 {
