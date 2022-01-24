@@ -77,7 +77,16 @@
                 </div>
                 <div class="category3">
                   <label for="value">Valor</label>
-                  <input type="text" name="R$0,00" class="input input3" placeholder="R$0,00" />
+                  <input
+                    type="text"
+                    name="R$0,00"
+                    class="input input3"
+                    required
+                    placeholder="R$0,00"
+                    onfocus="this.value= ''"
+                    onkeydown="testaCampoValor(event)"
+                    onkeyup="formatCurrency(event)"
+                  />
                 </div>
               </div>
               <input type="submit" value="Adicionar transação" class="add-transition" />
@@ -117,6 +126,7 @@
       </div>
     </main>
     <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/form.js"></script>
 
     <!-- Para ativar o modal, adicionar "--active" na classe "modal" (modal--active) -->
     <!-- <div class="modal">
