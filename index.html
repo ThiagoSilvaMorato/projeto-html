@@ -57,7 +57,7 @@
       <div class="container">
         <section class="new-transition">
           <h2 class="title-transition">Nova transação</h2>
-          <form>
+          <form onsubmit="testaFormulario(event)">
             <div class="adjust">
               <div class="categories">
                 <div class="category1">
@@ -65,7 +65,7 @@
                     <label for="transition-type">Tipo de transação</label>
                   </div>
                   <div>
-                    <select class="input input1">
+                    <select class="input input1" name="buy-sell">
                       <option value="c">Compra</option>
                       <option value="v">Venda</option>
                     </select>
@@ -73,13 +73,19 @@
                 </div>
                 <div class="category2">
                   <label for="merchandise-name">Nome da mercadoria</label>
-                  <input type="text" name="input" class="input input2" placeholder="Input" />
+                  <input
+                    type="text"
+                    name="merchandise-name"
+                    required
+                    class="input input2"
+                    placeholder="Input"
+                  />
                 </div>
                 <div class="category3">
                   <label for="value">Valor</label>
                   <input
                     type="text"
-                    name="R$0,00"
+                    name="value"
                     class="input input3"
                     required
                     placeholder="R$0,00"
