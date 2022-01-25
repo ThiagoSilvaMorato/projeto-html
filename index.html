@@ -91,7 +91,7 @@
                     placeholder="R$0,00"
                     onfocus="this.value= ''"
                     onkeydown="testaCampoValor(event)"
-                    onkeyup="formatCurrency(event)"
+                    onkeyup="currencyMask(event)"
                   />
                 </div>
               </div>
@@ -107,27 +107,11 @@
               <span>Mercadoria</span>
               <span>Valor</span>
             </div>
-            <div id="merch-table">
-              <div class="merchandise1">
-                <span class="signal">+</span>
-                <span class="ipsum">Lorem ipsum dolor sit amet consectetur</span>
-                <span class="merch-value">R$12.999,99</span>
-              </div>
-              <div class="merchandise1">
-                <span class="signal">-</span>
-                <span class="ipsum">Quis nostrud exercitation</span>
-                <span class="merch-value">R$99,99</span>
-              </div>
-              <div class="merchandise1">
-                <span class="signal">+</span>
-                <span class="ipsum">Lorem ipsum</span>
-                <span class="merch-value">R$9,99</span>
-              </div>
-            </div>
+            <div id="merch-table"></div>
             <div class="total">
               <span>Total</span>
-              <span id="merch-total">R$ 12.909,99</span>
-              <span class="status">(LUCRO)</span>
+              <span id="merch-total"></span>
+              <span class="status" id="status"></span>
             </div>
           </form>
         </section>
