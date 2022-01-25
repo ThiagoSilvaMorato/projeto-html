@@ -66,7 +66,6 @@ function desenhaTabela(merchandise) {
   } else {
     document.querySelector("#merch-table").innerHTML =
       "<p style='text-align: center;padding-bottom: 8px;'>Nenhuma transação cadastrada</p>";
-    console.log(document.querySelector("#merch-table").innerHTML);
   }
 
   var normalizedNumber = normalizeNumberToBR(totalValue);
@@ -83,5 +82,3 @@ function clearData() {
 
   desenhaTabela([]);
 }
-
-//Mensagem para extrato de transação vazio
