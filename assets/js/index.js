@@ -43,27 +43,30 @@ function normalizeNumberToBR(number) {
 }
 //Desenhando tabela de mercadorias
 function desenhaTabela(merchandise) {
-  currentLines = [...document.querySelectorAll("#merch-table .merchandise1")];
-  currentLines.forEach((element) => {
-    element.remove();
-  });
+  document.querySelector("#merch-table").innerHTML = "";
 
   var totalValue = 0;
-  for (index in merchandise) {
-    document.querySelector("#merch-table").innerHTML += `
-    <div class="merchandise1">
-      <span class="signal">${merchandise[index].transactionType == "c" ? "-" : "+"}</span>
-      <span class="ipsum">${merchandise[index].merchandiseName}</span>
-      <span class="merch-value">${merchandise[index].merchandiseValue}</span>
-    </div>`;
+  if (merchandise.length > 0) {
+    for (index in merchandise) {
+      document.querySelector("#merch-table").innerHTML += `
+      <div class="merchandise1">
+        <span class="signal">${merchandise[index].transactionType == "c" ? "-" : "+"}</span>
+        <span class="ipsum">${merchandise[index].merchandiseName}</span>
+        <span class="merch-value">${merchandise[index].merchandiseValue}</span>
+      </div>`;
 
-    var parsedValue = Number(
-      merchandise[index].merchandiseValue.replace(/[R\$ \.]+/g, "").replace(",", ".")
-    );
-    totalValue =
-      merchandise[index].transactionType == "c"
-        ? totalValue - parsedValue
-        : totalValue + parsedValue;
+      var parsedValue = Number(
+        merchandise[index].merchandiseValue.replace(/[R\$ \.]+/g, "").replace(",", ".")
+      );
+      totalValue =
+        merchandise[index].transactionType == "c"
+          ? totalValue - parsedValue
+          : totalValue + parsedValue;
+    }
+  } else {
+    document.querySelector("#merch-table").innerHTML =
+      "<p style='text-align: center;padding-bottom: 8px;'>Nenhuma transação cadastrada</p>";
+    console.log(document.querySelector("#merch-table").innerHTML);
   }
 
   var normalizedNumber = normalizeNumberToBR(totalValue);
@@ -75,11 +78,10 @@ desenhaTabela(merchandiseArray);
 
 //Atribuindo função para o "Limpar dados"
 function clearData() {
-  var form = document.querySelector("#formulario");
-  var formElements = [...form.elements];
-  formElements.forEach(function (el) {
-    el.value = "";
-  });
+  alert("Deseja realmente apagar os dados?");
+  localStorage.removeItem("merchandise");
 
-  console.log(formElements);
+  desenhaTabela([]);
 }
+
+//Mensagem para extrato de transação vazio
