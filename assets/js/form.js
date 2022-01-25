@@ -46,4 +46,10 @@ function testaFormulario(e) {
     alert("Número inválido!");
     return false;
   }
+
+  //Testando o campo "Nome da mercadoria"
+  if (e.target.elements["merchandise-name"].value.length == 0) {
+    alert('Preencha o campo "Nome da mercadoria"!');
+    return false;
+  }
 }
