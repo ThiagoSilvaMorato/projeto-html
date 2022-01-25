@@ -45,7 +45,7 @@
             <div id="modal">
               <a href="#" class="modal__close-button">X</a>
               <div class="menu">
-                <button class="menu-items modal__item">Limpar dados</button>
+                <button class="menu-items modal__item" onclick="clearData()">Limpar dados</button>
                 <a href="#" class="menu-items modal__item">Cadastro de transações </a>
               </div>
             </div>
@@ -57,7 +57,7 @@
       <div class="container">
         <section class="new-transition">
           <h2 class="title-transition">Nova transação</h2>
-          <form onsubmit="testaFormulario(event)">
+          <form onsubmit="testaFormulario(event)" id="formulario">
             <div class="adjust">
               <div class="categories">
                 <div class="category1">
@@ -95,7 +95,7 @@
                   />
                 </div>
               </div>
-              <input type="submit" value="Adicionar transação" class="add-transition" />
+              <button type="submit" class="add-transition">Adicionar transação</button>
             </div>
           </form>
         </section>

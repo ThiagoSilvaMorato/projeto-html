@@ -72,3 +72,14 @@ function desenhaTabela(merchandise) {
 }
 
 desenhaTabela(merchandiseArray);
+
+//Atribuindo função para o "Limpar dados"
+function clearData() {
+  var form = document.querySelector("#formulario");
+  var formElements = [...form.elements];
+  formElements.forEach(function (el) {
+    el.value = "";
+  });
+
+  console.log(formElements);
+}

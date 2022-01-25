@@ -31,6 +31,12 @@ function testaFormulario(e) {
     return false;
   }
 
+  //Testando o campo "Tipo de Transação"
+  if (e.target.elements["buy-sell"].value.length == 0) {
+    alert('Preencha o campo "Tipo de transação"!');
+    return false;
+  }
+
   //Salvando no Local Storage
   var merchandiseRaw = localStorage.getItem("merchandise");
   if (merchandiseRaw != null) {
