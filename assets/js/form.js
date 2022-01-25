@@ -52,4 +52,20 @@ function testaFormulario(e) {
     alert('Preencha o campo "Nome da mercadoria"!');
     return false;
   }
+
+  //Salvando no Local Storage
+  var merchandiseRaw = localStorage.getItem("merchandise");
+  if (merchandiseRaw != null) {
+    var merchandise = JSON.parse(merchandiseRaw);
+  } else {
+    var merchandise = [];
+  }
+
+  merchandise.push({
+    transactionType: e.target.elements["buy-sell"].value,
+    merchandiseName: e.target.elements["merchandise-name"].value,
+    merchandiseValue: e.target.elements["value"].value,
+  });
+
+  localStorage.setItem("merchandise", JSON.stringify(merchandise));
 }
