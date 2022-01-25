@@ -68,4 +68,6 @@ function testaFormulario(e) {
   });
 
   localStorage.setItem("merchandise", JSON.stringify(merchandise));
+
+  desenhaTabela(merchandise);
 }
